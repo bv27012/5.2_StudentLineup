@@ -10,25 +10,25 @@ int main()
 	int count = 0;
 	iFile.open("LineUp.txt");
 
-		while (iFile >> name)
+	while (iFile >> name)
+	{
+		cout << name << endl;
+		if (count == 0)
 		{
-			cout << name << endl;
-			if (count == 0)
-			{
-				first = last = name;
-			}
-			else
-			{
-				if (name < first)
-					first = name;
-
-				if (name > last)
-					last = name;
-			}
-			count++;
+			first = last = name;
 		}
+		else
+		{
+			if (name < first)
+				first = name;
 
-		if (!iFile)
+			if (name > last)
+				last = name;
+		}
+		count++;
+	}
+
+		if (!iFile.is_open())
 		{
 			cout << "ERROR: File not found." << endl;
 			return 1;
