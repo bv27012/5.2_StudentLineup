@@ -10,13 +10,28 @@ int main()
 	int count = 0;
 	iFile.open("LineUp.txt");
 
-	while (iFile >> name) 
+	while (iFile >> name)
 	{
 		cout << name << endl;
+		if (count == 0)
+		{
+			first = last = name;
+		}
+		else
+		{
+			if (name < first)
+				first = name;
+
+			if (name > last)
+				last = name;
+		}
 		count++;
 	}
 
-	cout << endl << "Number of students: " << count << endl;
+	cout << endl << "Number of students: " << count << endl << endl;
+	cout << "Alphabetical Order" << endl << "-------" << endl;
+	cout << "First: " << first << endl;
+	cout << "Last: " << last << endl;
 	iFile.close();
 
 }
