@@ -1,5 +1,4 @@
-// 5.2_StudentLineup.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//The comment line will go here soon.
 
 #include <iostream>
 #include <fstream>
@@ -7,4 +6,6 @@
 int main()
 {
 
+
 }
+
