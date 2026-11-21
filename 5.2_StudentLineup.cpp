@@ -10,23 +10,29 @@ int main()
 	int count = 0;
 	iFile.open("LineUp.txt");
 
-	while (iFile >> name)
-	{
-		cout << name << endl;
-		if (count == 0)
+		while (iFile >> name)
 		{
-			first = last = name;
-		}
-		else
-		{
-			if (name < first)
-				first = name;
+			cout << name << endl;
+			if (count == 0)
+			{
+				first = last = name;
+			}
+			else
+			{
+				if (name < first)
+					first = name;
 
-			if (name > last)
-				last = name;
+				if (name > last)
+					last = name;
+			}
+			count++;
 		}
-		count++;
-	}
+
+		if (!iFile)
+		{
+			cout << "ERROR: File not found." << endl;
+			return 1;
+		}
 
 	cout << endl << "Number of students: " << count << endl << endl;
 	cout << "Alphabetical Order" << endl << "-------" << endl;

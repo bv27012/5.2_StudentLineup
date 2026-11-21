@@ -141,9 +141,6 @@
   <ItemGroup>
     <ClCompile Include="5.2_StudentLineup.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="LineUp.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
